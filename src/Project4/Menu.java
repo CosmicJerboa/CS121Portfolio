@@ -39,7 +39,7 @@ public class Menu {
 
     private void accessAccount() {
         Customer customer;
-        Account account;
+        IAccount account;
         int pin;
         int accountNum;
         System.out.println("Please Enter Your Pin");
@@ -48,7 +48,7 @@ public class Menu {
         if (customer == null) {
             System.out.println("Invalid Pin");
         } else {
-            List<Account> accountList = customer.getAllAccounts();
+            List<IAccount> accountList = customer.getAllAccounts();
             for (int i = 0; i < accountList.size(); i++) {
                 System.out.println(accountList.get(i));
             }
@@ -116,14 +116,14 @@ public class Menu {
             if (yesOrNo.equalsIgnoreCase("no")) {
                 System.out.println("Enter Initial Deposit");
                 double initialBalance = Integer.parseInt(scan.nextLine());
-                Account newAccount = new Account(initialBalance);
+                IAccount newAccount = new Account(initialBalance);
                 customer.addAccount(newAccount);
                 System.out.println("New Account Opened: " + newAccount.getAccountNumber());
             }
             if (yesOrNo.equalsIgnoreCase("yes")) {
                 System.out.println("Enter Initial Deposit");
                 double initialBalance = Integer.parseInt(scan.nextLine());
-                Account newAccount = new PremiumAccount(initialBalance);
+                IAccount newAccount = new PremiumAccount(initialBalance);
                 customer.addAccount(newAccount);
                 System.out.println("New PREMIUM Account Opened: " + newAccount.getAccountNumber());
 

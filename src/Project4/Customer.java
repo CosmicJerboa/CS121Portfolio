@@ -8,7 +8,7 @@ public class Customer {
     String lastName;
     int pin;
     // This is the different data structure you asked me to make.
-    private List<Account> accountList = new LinkedList<>();
+    private List<IAccount> accountList = new LinkedList<>();
 
     public Customer(String firstName, String lastName, int pin) {
         this.firstName = firstName;
@@ -16,17 +16,17 @@ public class Customer {
         this.pin = pin;
     }
 
-    public void addAccount(Account account) {
+    public void addAccount(IAccount account) {
         accountList.add(account);
     }
 
-    public void removeAccount(Account account) {
+    public void removeAccount(IAccount account) {
         accountList.remove(account);
     }
 
-    public Account getAccount(int accountNumber) {
-        Account foundAccount = null;
-        for (Account account : accountList) {
+    public IAccount getAccount(int accountNumber) {
+        IAccount foundAccount = null;
+        for (IAccount account : accountList) {
             if (account.getAccountNumber() == accountNumber) {
                 foundAccount = account;
                 break;
@@ -35,7 +35,7 @@ public class Customer {
         return foundAccount;
     }
 
-    public List<Account> getAllAccounts() {
+    public List<IAccount> getAllAccounts() {
         return accountList;
     }
 

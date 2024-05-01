@@ -2,7 +2,7 @@ package Project4;
 
 import java.util.LinkedList;
 
-public class Account {
+public class Account implements IAccount {
     double balance;
     int accountNumber;
     static int numberOfAccounts = 1000;
