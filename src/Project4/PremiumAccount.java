@@ -1,3 +1,5 @@
+package Project4;
+
 //inheritance you asked me to make
 public class PremiumAccount extends Account {
     public PremiumAccount(double intialDeposit) {

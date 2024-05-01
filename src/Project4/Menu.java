@@ -1,3 +1,5 @@
+package Project4;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -139,11 +141,6 @@ public class Menu {
         Customer newCustomer = new Customer(firstName, lastName, pin);
         bank.addCustomer(newCustomer);
         return newCustomer;
-//        System.out.println("Enter Deposit Amount");
-//        double initialBalance = Integer.parseInt(scan.nextLine());
-//        Account newAccount = new Account(initialBalance);
-//        newCustomer.addAccount(newAccount);
-//        System.out.println("New Account Opened: " + newAccount.getAccountNumber());
     }
 
     private void closeAccounts() {
